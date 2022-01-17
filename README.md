@@ -1,2 +1,2 @@
-# Todo-App-with-json-server-with-description-By-Anamika
+# redux-todo-App-with-description
 Created with CodeSandbox
