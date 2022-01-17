@@ -2,7 +2,8 @@ import { actionConstants } from "./action";
 
 const initState = {
   todos: [],
-  i
+  isLoading: true,
+  isError: false
 };
 function reducer(state = initState, action) {
   console.log(state, action);
