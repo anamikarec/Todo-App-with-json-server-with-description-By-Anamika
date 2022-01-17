@@ -1,13 +1,8 @@
 import { actionConstants } from "./action";
 
 const initState = {
-  todos: [
-    {
-      id: 1,
-      status: false,
-      title: "BUY BREAD"
-    }
-  ]
+  todos: [],
+  i
 };
 function reducer(state = initState, action) {
   console.log(state, action);
