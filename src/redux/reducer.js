@@ -8,6 +8,26 @@ const initState = {
 function reducer(state = initState, action) {
   console.log(state, action);
   switch (action.type) {
+    case actionConstants.GET_TODO_REQUEST: {
+      return {
+        ...state,
+        isLoading: true
+      };
+    }
+    case actionConstants.GET_TODO_SUCCESS: {
+      return {
+        ...state,
+        todos: action.payload.todos,
+        isLoading: false
+      };
+    }
+    case actionConstants.GET_TODO_FAILURE: {
+      return {
+        ...state,
+        isLoading: false,
+        isError: true
+      };
+    }
     case actionConstants.ADD_TODO: {
       // this doesn't update the todos , becuase the object referenece does n't change.
       // that is why we spread the state, so it point to the new object

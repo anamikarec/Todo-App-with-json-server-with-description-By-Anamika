@@ -14,6 +14,9 @@ function Todo() {
       id: uuid()
     });
     dispatch(action);
+    // request
+    // success
+    // failure
   };
   return (
     <div>
