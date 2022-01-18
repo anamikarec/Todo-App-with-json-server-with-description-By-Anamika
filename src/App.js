@@ -1,12 +1,16 @@
 import "./styles.css";
 import Todo from "./Todo/Todo";
-
+import Login from "./Login/Login";
+import { useSelector } from "react-redux";
 export default function App() {
-  return (
+  const isAuth = useSelector((state) => state.isAuth);
+  return isAuth ? (
     <div className="App">
       <h1>Todo</h1>
       <Todo />
     </div>
+  ) : (
+    <Login />
   );
 }
 

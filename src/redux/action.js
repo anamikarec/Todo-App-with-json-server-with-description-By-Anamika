@@ -6,9 +6,24 @@ export const actionConstants = {
   GET_TODO_REQUEST: "GET_TODO_REQUEST",
   GET_TODO_SUCCESS: "GET_TODO_SUCCESS",
   GET_TODO_FAILURE: "GET_TODO_FAILURE",
+  /// here we can add todo via network request
+  // by breaking down addTodo in three parts
+  // and remove todo in three parts
+  // and toggle todo in three parts
   ADD_TODO: "ADD_TODO",
   REMOVE_TODO_ITEM: "REMOVE_TODO",
-  TOGGLE_TODO_STATUS: "TOGGLE_TODO_STATUS"
+  TOGGLE_TODO_STATUS: "TOGGLE_TODO_STATUS",
+  // there should be also three parts, since network request has three parts
+  LOGIN_SUCCESS: "LOGIN_SUCCESS"
+};
+
+export const loginSuccess = (token) => {
+  return {
+    type: actionConstants.LOGIN_SUCCESS,
+    payload: {
+      token: token
+    }
+  };
 };
 
 export const getTodosRequest = () => {

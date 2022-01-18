@@ -3,11 +3,20 @@ import { actionConstants } from "./action";
 const initState = {
   todos: [],
   isLoading: true,
-  isError: false
+  isError: false,
+  isAuth: false,
+  token: null
 };
 function reducer(state = initState, action) {
   console.log(state, action);
   switch (action.type) {
+    case actionConstants.LOGIN_SUCCESS: {
+      return {
+        ...state,
+        isAuth: true,
+        token: action.payload.token
+      };
+    }
     case actionConstants.GET_TODO_REQUEST: {
       return {
         ...state,
