@@ -90,3 +90,5 @@ console.log(a === b);
 // we are using redux state management tool => that's why we are not using useState()
 
 // no need to write these files as jsx format.
+
+// separation of concern means files in the organised way or format.
