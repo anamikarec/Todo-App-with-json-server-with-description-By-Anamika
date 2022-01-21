@@ -1,15 +1,10 @@
 import { actionConstants } from "./action";
-import { loadData, saveData } from "../utils/localStorage";
-
-const token = loadData("token") || null;
+import { loadData, saveData } from "../../utils/localStorage";
 
 const initState = {
   todos: [],
   isLoading: true,
-  isError: false,
-  // !! token => !null => true => !!null => false
-  isAuth: !!token, // or we can use =>  isAuth: token !== null
-  token: token
+  isError: false
 };
 function reducer(state = initState, action) {
   console.log(state, action);
