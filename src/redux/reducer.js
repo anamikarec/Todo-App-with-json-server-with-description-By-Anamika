@@ -88,3 +88,5 @@ console.log(a === b);
 
 // reducer is description on how your store will get updated.
 // we are using redux state management tool => that's why we are not using useState()
+
+// no need to write these files as jsx format.
