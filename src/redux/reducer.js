@@ -1,16 +1,21 @@
 import { actionConstants } from "./action";
+import { loadData, saveData } from "../utils/localStorage";
+
+const token = loadData("token") || null;
 
 const initState = {
   todos: [],
   isLoading: true,
   isError: false,
-  isAuth: false,
-  token: null
+  // !! token => !null => true => !!null => false
+  isAuth: !!token, // or we can use =>  isAuth: token !== null
+  token: token
 };
 function reducer(state = initState, action) {
   console.log(state, action);
   switch (action.type) {
     case actionConstants.LOGIN_SUCCESS: {
+      saveData("token", action.payload.token);
       return {
         ...state,
         isAuth: true,
